@@ -17,17 +17,7 @@ const Projects = () => {
       liveLink: "https://portfolio-demo.netlify.app",
       featured: true
     },
-    {
-      id: 2,
-      title: "Personal Portfolio Website",
-      category: "frontend",
-      description: "A responsive portfolio website showcasing my skills and projects with dark/light mode toggle and modern design.",
-      image: "/api/placeholder/400/250",
-      technologies: ["React", "CSS3", "React Router", "React Icons"],
-      githubLink: "https://github.com/yourusername/portfolio",
-      liveLink: "https://portfolio-demo.netlify.app",
-      featured: true
-    },
+    
    
   ];
 
