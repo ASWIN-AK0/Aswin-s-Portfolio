@@ -2,21 +2,27 @@ pipeline {
     agent any
 
     stages {
-        stage('Install Dependencies') {
+        stage('Checkout') {
             steps {
-                sh 'npm install'
+                git branch: 'main', url: 'https://github.com/ASWIN-AK0/Aswin-s-Portfolio.git'
             }
         }
 
         stage('Build') {
             steps {
-                sh 'npm run build'
+                echo "Building the project..."
             }
         }
 
-        stage('Archive Build') {
+        stage('Test') {
             steps {
-                archiveArtifacts artifacts: 'build/**', followSymlinks: false
+                echo "Running tests..."
+            }
+        }
+
+        stage('Deploy') {
+            steps {
+                echo "Deploy step (optional)"
             }
         }
     }
